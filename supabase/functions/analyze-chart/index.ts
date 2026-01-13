@@ -181,13 +181,31 @@ serve(async (req) => {
     }
 
     console.log("AI response received, parsing JSON...");
+    console.log("Raw content length:", content.length);
 
     // Extract JSON from the response (handle markdown code blocks)
     let jsonContent = content;
-    const jsonMatch = content.match(/```(?:json)?\s*([\s\S]*?)```/);
-    if (jsonMatch) {
+    
+    // Try multiple patterns to extract JSON
+    // Pattern 1: ```json ... ```
+    let jsonMatch = content.match(/```json\s*([\s\S]*?)\s*```/);
+    if (jsonMatch && jsonMatch[1]) {
       jsonContent = jsonMatch[1];
+    } else {
+      // Pattern 2: ``` ... ``` (without json specifier)
+      jsonMatch = content.match(/```\s*([\s\S]*?)\s*```/);
+      if (jsonMatch && jsonMatch[1]) {
+        jsonContent = jsonMatch[1];
+      } else {
+        // Pattern 3: Try to find JSON object directly
+        const jsonObjectMatch = content.match(/\{[\s\S]*\}/);
+        if (jsonObjectMatch) {
+          jsonContent = jsonObjectMatch[0];
+        }
+      }
     }
+
+    console.log("Extracted JSON content (first 200 chars):", jsonContent.substring(0, 200));
 
     const analysis = JSON.parse(jsonContent.trim());
 
