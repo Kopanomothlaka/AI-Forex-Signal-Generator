@@ -148,3 +148,4 @@ A confluence-based summary combining <strong>technical + fundamental analysis</s
 This project is for <strong>educational and analytical purposes only</strong>.<br>
 It does <strong>not</strong> provide financial advice. Always manage risk responsibly.
 </p>
+<p><i href="https://forexsignalsai.netlify.app/">Ai Forex Signals</i></p>
