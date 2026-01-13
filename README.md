@@ -1,73 +1,150 @@
-# Welcome to your Lovable project
+<h2>📊 AI Trading Analyst – Core Workflow</h2>
+<h3>1️⃣ Image Input Analysis (Chart Reading)</h3><p>
+The AI accepts uploaded <strong>trading chart screenshots</strong> (TradingView or similar) and automatically identifies:
+</p>
+<ul>
+    <li><strong>Asset</strong> (e.g. XAUUSD, EURUSD, BTCUSD)</li>
+    <li><strong>Timeframe</strong> (1M, 5M, 15M, 1H, etc.)</li>
+    <li><strong>Current market price</strong></li>
+    <li><strong>Market structure</strong>
+        <ul>
+            <li>Trend (Bullish / Bearish)</li>
+            <li>Range / Consolidation</li>
+            <li>Potential reversal zones</li>
+        </ul>
+    </li>
+    <li><strong>Key support &amp; resistance levels</strong></li>
+    <li><strong>Visible indicators</strong>
+        <ul>
+            <li>RSI</li>
+            <li>MACD</li>
+            <li>Moving Averages</li>
+            <li>QQE</li>
+            <li>Other common indicators</li>
+        </ul>
+    </li>
+    <li><strong>Price action signals</strong>
+        <ul>
+            <li>Higher highs / lower lows</li>
+            <li>Breakouts &amp; fakeouts</li>
+            <li>Rejections and key candle patterns</li>
+        </ul>
+    </li>
+</ul>
 
-## Project info
+<hr>
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+<h3>2️⃣ Technical Analysis Output</h3>
+<p>The AI provides structured technical insights including:</p>
 
-## How can I edit this code?
+<ul>
+    <li><strong>Market Bias</strong>
+        <ul>
+            <li>Bullish</li>
+            <li>Bearish</li>
+            <li>Range</li>
+        </ul>
+    </li>
+    <li><strong>Trade Scenarios</strong>
+        <ul>
+            <li><strong>BUY setup</strong>
+                <ul>
+                    <li>Entry</li>
+                    <li>Stop Loss</li>
+                    <li>Take Profit</li>
+                </ul>
+            </li>
+            <li><strong>SELL setup</strong>
+                <ul>
+                    <li>Entry</li>
+                    <li>Stop Loss</li>
+                    <li>Take Profit</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><strong>Probability Assessment</strong> (High / Medium / Low confidence)</li>
+    <li><strong>Clear explanations</strong>
+        <ul>
+            <li>Simple, trader-friendly reasoning</li>
+            <li>No jargon overload</li>
+        </ul>
+    </li>
+</ul>
 
-There are several ways of editing your application.
+<hr>
 
-**Use Lovable**
+<h3>3️⃣ Fundamental &amp; News Analysis</h3>
+<p>The AI evaluates macro-economic and market-moving fundamentals:</p>
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+<ul>
+    <li>USD strength or weakness</li>
+    <li>Central bank policies (Fed, ECB, etc.)</li>
+    <li>Interest rate expectations</li>
+    <li>Inflation data (CPI, PPI)</li>
+    <li>Geopolitical risk factors</li>
+    <li>Safe-haven flows (especially for Gold)</li>
+    <li>Upcoming high-impact economic events</li>
+    <li>Expected market volatility</li>
+</ul>
 
-Changes made via Lovable will be committed automatically to this repo.
+<p>
+The system clearly states whether fundamentals support
+<strong>BUY</strong>, <strong>SELL</strong>, or <strong>NEUTRAL</strong> conditions.
+</p>
 
-**Use your preferred IDE**
+<hr>
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+<h3>4️⃣ Final Trading Decision</h3>
+<p>
+A confluence-based summary combining <strong>technical + fundamental analysis</strong>, including:
+</p>
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+<ul>
+    <li><strong>Final Bias</strong> (BUY / SELL / WAIT)</li>
+    <li><strong>Best Trade Plan</strong> based on the highest probability setup</li>
+    <li><strong>Volatility &amp; News Warnings</strong>
+        <ul>
+            <li>Alerts for high-risk trading periods</li>
+        </ul>
+    </li>
+    <li><strong>Risk Management Guidance</strong>
+        <ul>
+            <li>Position sizing principles</li>
+            <li>Avoiding overtrading</li>
+            <li>Emphasis on discipline</li>
+        </ul>
+    </li>
+</ul>
 
-Follow these steps:
+<hr>
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+<h3>🛡️ Trading Rules &amp; Philosophy</h3>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+<ul>
+    <li>Professional, calm, and precise output</li>
+    <li>No financial guarantees</li>
+    <li>Always emphasize:
+        <ul>
+            <li>Trade confirmation</li>
+            <li>Risk control</li>
+            <li>Capital protection</li>
+        </ul>
+    </li>
+    <li>If market data is unclear or conflicting → <strong>WAIT</strong></li>
+    <li>Designed for:
+        <ul>
+            <li>Scalping</li>
+            <li>Day trading</li>
+            <li>Swing trading</li>
+        </ul>
+    </li>
+</ul>
 
-# Step 3: Install the necessary dependencies.
-npm i
+<hr>
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+<h3>📌 Disclaimer</h3>
+<p>
+This project is for <strong>educational and analytical purposes only</strong>.<br>
+It does <strong>not</strong> provide financial advice. Always manage risk responsibly.
+</p>
