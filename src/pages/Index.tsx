@@ -6,6 +6,7 @@ import { TechnicalAnalysis } from '@/components/TechnicalAnalysis';
 import { FundamentalAnalysis } from '@/components/FundamentalAnalysis';
 import { FinalDecision } from '@/components/FinalDecision';
 import { AnalysisPlaceholder } from '@/components/AnalysisPlaceholder';
+import { RiskCalculator } from '@/components/RiskCalculator';
 import { useChartAnalysis } from '@/hooks/useChartAnalysis';
 import { AlertTriangle } from 'lucide-react';
 
@@ -41,6 +42,13 @@ export default function Index() {
                   currentPrice={analysis.currentPrice}
                 />
                 
+                <RiskCalculator
+                  entryPrice={analysis.tradeScenarios.buy.entry}
+                  stopLoss={analysis.tradeScenarios.buy.stopLoss}
+                  takeProfit={analysis.tradeScenarios.buy.takeProfit}
+                  asset={analysis.asset}
+                />
+
                 <div className="grid sm:grid-cols-2 gap-4">
                   <TradeScenario
                     type="buy"
